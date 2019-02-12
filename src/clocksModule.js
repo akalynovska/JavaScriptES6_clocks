@@ -9,11 +9,11 @@ class ClocksModule {
     run() {
         service.findAll()
             .then(clocksObject => {
-                console.log(clocksObject);
+                //console.log(clocksObject);
                 let clocks = this.createClocks(clocksObject);
                 this.render(clocks);
             })
-            .catch(error => console.log(error));
+            .catch(error => console.log('rrr'+error.message));
     }
 
     createClocks(clocksObject) {
@@ -26,10 +26,8 @@ class ClocksModule {
     }
 
     render(clocks) {
-
-
         let clocksHtml = ``;
-        console.log(clocks);
+
         clocks.forEach((clock) => {
             clocksHtml += clock.render();
         });
@@ -41,26 +39,7 @@ class ClocksModule {
         `;
 
         this.target.innerHTML = clocksModuleTemplate;
-        //clocksHtml = clocksData;
 
-        //console.log(this.importedData.data);
-// clocks.forEach((value, index, clocks) => {
-//                  //     console.log(data);
-//                  //     data += value.render();
-//                  // })
-
-        // clocks.forEach(clock => {
-        //
-        //      html += clocksModuleTemplate;
-        //          //`<div>
-        //     //     <img src='${employee.picture}'/>
-        //     //     <div>
-        //     //         ${employee.firstName} ${employee.lastName}
-        //     //         <p>${employee.phone}</p>
-        //     //     </div>
-        //     // </div>`;
-        // });
-        // this.target.innerHTML = html;
     }
 
 }

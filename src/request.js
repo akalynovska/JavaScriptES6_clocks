@@ -1,4 +1,3 @@
-// XMLHttpRequest wrapper using callbacks
 export default obj => {
     return new Promise((resolve, reject) => {
         let xhr = new XMLHttpRequest();
@@ -15,7 +14,10 @@ export default obj => {
                 reject(xhr.statusText);
             }
         };
-        xhr.onerror = () => reject(xhr.statusText);
+        xhr.onerror = () => {
+            console.log('2'+xhr.statusText);
+            reject(xhr.statusText);
+        }
         xhr.send(obj.body);
     });
 };

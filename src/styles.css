@@ -10,3 +10,62 @@ main {
     width: 95%;
     margin: auto;
 }
+
+.clock-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 210px);
+    grid-gap: 10px;
+    justify-content: space-around;
+}
+
+clock {
+    text-align: center;
+}
+
+digital-clock {
+    font-family: 'digital_dreamregular';
+    background: #666666;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+analog-clock {
+    margin: 5px;
+    display: block;
+    width: 204px;
+    height: 204px;
+}
+
+clock-face {
+    display: block;
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: absolute;
+}
+
+.arrow-minutes {
+    background: #444444;
+    width: 2px;
+    height: 80px;
+    position: relative;
+    left: 100px;
+    top: 20px;
+    transform-origin: 50% 100%;
+}
+
+.arrow-hours {
+    background: red;
+    width: 4px;
+    height: 65px;
+    position: relative;
+    left: 100px;
+    top: -45px;
+    transform-origin: 50% 100%;
+}
