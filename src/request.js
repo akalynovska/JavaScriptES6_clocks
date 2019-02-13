@@ -15,8 +15,7 @@ export default obj => {
             }
         };
         xhr.onerror = () => {
-            console.log('2'+xhr.statusText);
-            reject(xhr.statusText);
+            reject(xhr.status);
         }
         xhr.send(obj.body);
     });

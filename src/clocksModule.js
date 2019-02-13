@@ -9,11 +9,10 @@ class ClocksModule {
     run() {
         service.findAll()
             .then(clocksObject => {
-                //console.log(clocksObject);
                 let clocks = this.createClocks(clocksObject);
                 this.render(clocks);
             })
-            .catch(error => console.log('rrr'+error.message));
+            .catch(error => console.log(error));
     }
 
     createClocks(clocksObject) {
