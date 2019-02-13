@@ -1,5 +1,5 @@
 import request from './request';
-let theUrl = 'https://net.dailyfxasia.com/test.php';
+let theUrl = 'https://wisedeveloper.000webhostapp.com/index.php';
 
 export let findAll = () => {
     return request({url: theUrl})
