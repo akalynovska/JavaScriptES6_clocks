@@ -47,14 +47,14 @@ clock-face {
     height: 200px;
     border-radius: 50%;
     border: 2px solid #000;
-    position: absolute;
+    position: relative;
 }
 
 .arrow-minutes {
     background: #444444;
     width: 2px;
     height: 80px;
-    position: relative;
+    position: absolute;
     left: 100px;
     top: 20px;
     transform-origin: 50% 100%;
@@ -64,8 +64,8 @@ clock-face {
     background: red;
     width: 4px;
     height: 65px;
-    position: relative;
+    position: absolute;
     left: 100px;
-    top: -45px;
+    top: 35px;
     transform-origin: 50% 100%;
 }
